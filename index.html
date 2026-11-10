@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="activity"></i>
+                </div>
+                <h2>Posture Buddy</h2>
+            </div>
+
+            <div class="menu">
+                <p class="menu-heading">MENU</p>
+
+                <a href="#" class="active">
+                    <i data-lucide="layout-dashboard"></i>
+                    Dashboard
+                </a>
+
+                <a href="#analytics">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    Analytics
+                </a>
+
+                <a href="#notifications">
+                    <i data-lucide="bell"></i>
+                    Notifications
+                </a>
+
+                <a href="#settings">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="profile">
+                    <div class="avatar">PB</div>
+                    <div>
+                        <h4>My Workspace</h4>
+                        <p>Personal Account</p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Monitor your posture and improve your health.</p>
+                </div>
+
+                <div class="top-actions">
+                    <span class="date" id="date"></span>
+                    <button class="icon-btn" id="notificationBtn">
+                        <i data-lucide="bell"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Status -->
+            <section class="welcome">
+                <div>
+                    <h2>Welcome back! 👋</h2>
+                    <p>Let's maintain a healthy sitting posture today.</p>
+                </div>
+
+                <div class="live-status">
+                    <span class="dot"></span>
+                    Monitoring Active
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                <div class="stat-card good">
+                    <div class="stat-top">
+                        <span>Good Posture Time</span>
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <h2 id="goodTime">02:34:18</h2>
+                    <p>Correct sitting posture</p>
+                </div>
+
+                <div class="stat-card bad">
+                    <div class="stat-top">
+                        <span>Bad Posture Time</span>
+                        <i data-lucide="alert-circle"></i>
+                    </div>
+                    <h2 id="badTime">00:42:12</h2>
+                    <p>Incorrect sitting posture</p>
+                </div>
+
+                <div class="stat-card total">
+                    <div class="stat-top">
+                        <span>Total Sitting Time</span>
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h2 id="totalTime">03:16:30</h2>
+                    <p>Today's total session</p>
+                </div>
+
+                <div class="stat-card score">
+                    <div class="stat-top">
+                        <span>Posture Score</span>
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h2>78%</h2>
+                    <p>Daily performance</p>
+                </div>
+
+            </section>
+
+            <!-- Camera Section -->
+            <section class="camera-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Live Posture Monitoring</h2>
+                        <p>AI-powered posture detection</p>
+                    </div>
+
+                    <span class="camera-status">
+                        <span class="dot"></span>
+                        Camera Connected
+                    </span>
+                </div>
+
+                <div class="camera-container">
+
+                    <div class="camera-placeholder">
+                        <i data-lucide="camera"></i>
+                        <h2>Camera Preview</h2>
+                        <p>Your ESP32-CAM feed will appear here.</p>
+                        <span>DEMO PREVIEW</span>
+                    </div>
+
+                    <div class="posture-indicator">
+                        <span class="dot"></span>
+                        GOOD POSTURE
+                    </div>
+
+                </div>
+
+                <div class="current-duration">
+                    <span>Current posture duration</span>
+                    <strong>00:12:45</strong>
+                </div>
+
+            </section>
+
+            <!-- Analytics -->
+            <section class="analytics-grid" id="analytics">
+
+                <div class="analytics-card">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Posture Distribution</h2>
+                            <p>Today's performance</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div>
+                            <span>Good Posture</span>
+                            <strong>78%</strong>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress good-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div>
+                            <span>Bad Posture</span>
+                            <strong>22%</strong>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress bad-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="donut">
+                        <div class="donut-inner">
+                            <h2>78%</h2>
+                            <p>Good Posture</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-card" id="notifications">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Recent Notifications</h2>
+                            <p>Your latest posture alerts</p>
+                        </div>
+                    </div>
+
+                    <div class="notification-list">
+
+                        <div class="notification">
+                            <div class="notification-icon green">
+                                <i data-lucide="check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Good posture maintained</h4>
+                                <p>Great job! Keep it up.</p>
+                                <small>10:42 AM</small>
+                            </div>
+                        </div>
+
+                        <div class="notification">
+                            <div class="notification-icon red">
+                                <i data-lucide="alert-triangle"></i>
+                            </div>
+                            <div>
+                                <h4>Incorrect posture detected</h4>
+                                <p>Please straighten your back.</p>
+                                <small>10:30 AM</small>
+                            </div>
+                        </div>
+
+                        <div class="notification">
+                            <div class="notification-icon blue">
+                                <i data-lucide="bell"></i>
+                            </div>
+                            <div>
+                                <h4>Monitoring started</h4>
+                                <p>Camera successfully connected.</p>
+                                <small>09:00 AM</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer>
+                <p>Posture Buddy © 2026 | Smart Posture Monitoring System</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
