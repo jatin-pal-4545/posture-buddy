@@ -1059,3 +1059,38 @@ footer {
     margin-left: 290px;
     width: calc(100% - 290px);
 }
+
+/* Live posture indicator */
+
+.posture-indicator.good {
+    background-color: #087f4f;
+    color: white;
+}
+
+.posture-indicator.bad {
+    background-color: #dc4545;
+    color: white;
+}
+
+.posture-indicator.good .dot {
+    background-color: #4ade80;
+}
+
+.posture-indicator.bad .dot {
+    background-color: #ffffff;
+}
+
+/* Live camera feed */
+
+.camera-placeholder {
+    position: relative;
+    overflow: hidden;
+}
+
+#liveCamera {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #111;
+}

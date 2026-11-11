@@ -149,15 +149,16 @@
                 <div class="camera-container">
 
                     <div class="camera-placeholder">
-                        <i data-lucide="camera"></i>
-                        <h2>Camera Preview</h2>
-                        <p>Your ESP32-CAM feed will appear here.</p>
-                        <span>DEMO PREVIEW</span>
+                        <img
+                            src="http://127.0.0.1:5000/video_feed"
+                            alt="Live Posture Camera Feed"
+                            id="liveCamera"
+                        >
                     </div>
 
-                    <div class="posture-indicator">
+                    <div class="posture-indicator" id="postureIndicator">
                         <span class="dot"></span>
-                        GOOD POSTURE
+                        <span id="postureStatus">WAITING</span>
                     </div>
 
                 </div>
@@ -270,6 +271,7 @@
 
     <script src="script.js"></script>
     <script type="module" src="dashboard-auth.js"></script>
+    <script type="module" src="posture-history.js"></script>
     <script>
         lucide.createIcons();
     </script>
