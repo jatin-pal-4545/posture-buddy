@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Posture Buddy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5ef;
+            padding: 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px #00000012;
+        }
+
+        h1 {
+            color: #172b4d;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 9px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            background: #172b4d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #263f65;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .forgot {
+            display: block;
+            text-align: right;
+            margin: 0 0 20px;
+            font-size: 14px;
+        }
+
+        #message {
+            margin-top: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #456b91;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Posture Buddy</h1>
+        <p>Welcome back! Log in to monitor your posture.</p>
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+            <a href="#" class="forgot" id="forgotPassword">
+                Forgot password?
+            </a>
+
+            <button type="submit" id="loginBtn">
+                Login
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+        <div class="signup-link">
+            Don't have an account?
+            <a href="signup.html">Create account</a>
+        </div>
+
+    </div>
+
+    <script type="module" src="login-page.js"></script>
+
+</body>
+</html>

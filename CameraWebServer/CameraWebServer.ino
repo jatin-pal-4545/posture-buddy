@@ -10,8 +10,8 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "OPPO A11k";
-const char *password = "jatin1234";
+const char *ssid = "Galaxy M34 5G 77B6";
+const char *password = "jatin123";
 
 void startCameraServer();
 void setupLedFlash();
